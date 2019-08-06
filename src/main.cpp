@@ -86,7 +86,7 @@ int main() {
             iss >> ro;
             iss >> theta;
             iss >> ro_dot;
-            meas_package.raw_measurements_ << ro,theta, ro_dot;
+            meas_package.raw_measurements_ << ro, theta, ro_dot;
             iss >> timestamp;
             meas_package.timestamp_ = timestamp;
           }
@@ -108,7 +108,7 @@ int main() {
           ground_truth.push_back(gt_values);
           
           // Call ProcessMeasurement(meas_package) for Kalman filter
-          fusionEKF.ProcessMeasurement(meas_package);       
+          fusionEKF.ProcessMeasurement(meas_package);
 
           // Push the current estimated x,y positon from the Kalman filter's 
           //   state vector
